@@ -1,0 +1,17 @@
+h1{
+    font-size: 40px;
+    text-align: center;
+}
+.containerInput{
+    margin: 50px 0 0 50px;
+}
+.user-word{
+    width: 130px;
+    height: 30px;
+}
+.button-word{
+    width: 70px;
+    height: 20px;
+    margin: 20px 0 0 0;
+    padding: 0 0 10px 0;
+}
