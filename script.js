@@ -10,6 +10,19 @@ let inputChecker = "";
 let counterCorrect = 0;
 let counterIncorrect = 1;
 
+input.addEventListener("Enter", e => {
+    if(e.key === "Enter"){
+        e.preventDefault();
+        select.click();
+    }
+})
+inputLetter.addEventListener("Enter", e => {
+    if(e.key === "Enter"){
+        e.preventDefault();
+        selectLetter.click();
+    }
+})
+
 select.addEventListener("click", e => {
     e.preventDefault();
     for (let i=0; i<input.value.length; i++){
@@ -27,9 +40,10 @@ select.addEventListener("click", e => {
 selectLetter.addEventListener("click", e => {
     e.preventDefault();
     for(let i=0; i<input.value.length; i++){
-        if(inputLetter.value == input.value.charAt(i).toLowerCase()){
+        if(inputLetter.value.toLowerCase() == input.value.charAt(i).toLowerCase()){
             let letterHolder = document.querySelector(".div-"+i);
             letterHolder.classList.remove("invisible");
+            letterHolder.classList.add("clear");
             inputChecker = inputLetter.value;
             counterCorrect++;
             checkWin();
@@ -64,5 +78,3 @@ function checkWin(){
         document.querySelector(".showWin").classList.remove("offline");
     }
 }
-
-//https://i.imgur.com/XPi9r81.png

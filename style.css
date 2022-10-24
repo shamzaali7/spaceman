@@ -1,6 +1,11 @@
+body{
+    background-image: url("https://i.imgur.com/iKVoqHz.jpg");
+}
 h1{
-    font-size: 40px;
+    font-size: 100px;
+    font-family: 'Bungee Shade', cursive;
     text-align: center;
+    margin: 20px 0 10px 0;
 }
 .containerInput{
     margin: 50px 0 0 50px;
@@ -42,24 +47,28 @@ h1{
     justify-content: center;
 }
 .containerLetters{
+    background-color: black;
     border-style: groove;
-    border-color: black;
+    border-color: white;
     border-width: 2px;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 30px 40px 30px 40px;
     justify-content: space-between;
-    margin: 10px 50px 10px 50px;
+    margin: 30px 50px 10px 50px;
 }
 .containerLetters div{
     /* add underline to boxes */
-    border-color: black;
+    border-color: white;
     border-bottom-style: groove;
     font-size: 50px;
     margin: 10px 30px 0 30px;
     text-align: center;
 }
 .invisible{
+    color: Black;
+}
+.clear{
     color: white;
 }
