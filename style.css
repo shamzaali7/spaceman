@@ -15,3 +15,44 @@ h1{
     margin: 20px 0 0 0;
     padding: 0 0 10px 0;
 }
+.containerInputChar{
+    margin: 50px 0 0 50px;
+}
+.user-word-2{
+    width: 130px;
+    height: 30px;
+}
+.button-word-2{
+    width: 70px;
+    height: 20px;
+    margin: 20px 0 0 0;
+    padding: 0 0 10px 0;
+}
+.offline{
+    display: none;
+}
+.containerUFO{
+
+}
+.containerLetters{
+    border-style: groove;
+    border-color: black;
+    border-width: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px 40px 30px 40px;
+    justify-content: space-between;
+    margin: 10px 50px 10px 50px;
+}
+.containerLetters div{
+    /* add underline to boxes */
+    border-color: black;
+    border-bottom-style: groove;
+    font-size: 50px;
+    margin: 10px 30px 0 30px;
+    text-align: center;
+}
+.invisible{
+    color: white;
+}
