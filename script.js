@@ -5,6 +5,7 @@ const charInputContainer = document.querySelector(".containerInputLetter");
 const selectWord = document.querySelector(".button-word");
 const selectLetter = document.querySelector(".button-letter");
 const displayUsedLetters = document.querySelector(".display-used-letters")
+const reset = document.querySelector(".resetB");
 let input = document.querySelector(".user-word");
 let inputLetter = document.querySelector(".user-letter");
 let inputChecker = "";
@@ -94,6 +95,10 @@ function checkWin(){
         document.querySelector(".winsNumber").innerText = wins;
     }
 }
+
+reset.addEventListener("click", reload => {
+    location.reload();
+})
 
 // input.addEventListener("Enter", e => {
 //     if(e.key === "Enter"){

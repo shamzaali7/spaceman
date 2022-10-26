@@ -5,12 +5,26 @@ body{
     position: relative;
     /* z-index: -1; */
 }
-h1{
+.containerTitle{
+    display: flex;
+}
+.align{
+    flex: 1;
+}
+.title{
+    flex: 1;
     color: rgba(255,255,255,0.5);
     font-size: 100px;
     font-family: 'Bungee Shade', cursive;
     text-align: center;
     margin: 20px 0 10px 0;
+}
+.containerTitle div{
+    flex: 1;
+    text-align: right;
+}
+.resetDiv{
+    margin: 50px 50px 0 0;
 }
 .containerInput{
     margin: 50px 0 0 50px;
@@ -39,9 +53,10 @@ h1{
     padding: 0 0 10px 0;
 }
 .containerWin{
-    display: flex;
+    flex: 2;
     align-items: center;
     justify-content: center;
+    margin: 0 80 0 0px;
 }
 .offline{
     display: none;
@@ -66,7 +81,7 @@ h1{
     flex: 2;
     align-items: center;
     justify-content: center;
-    margin: 0px 0 0 70px;
+    margin: 0 0 0 80px;
 }
 .containerUFO .box-3{
     flex: 1;
