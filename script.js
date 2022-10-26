@@ -13,6 +13,8 @@ let counterIncorrect = 1;
 let counterLetter = 0;
 let checkerUsed = 0;
 let alreadyUsed = [];
+let wins = 0;
+let losses = 0;
 
 
 selectWord.addEventListener("click", e => {
@@ -63,6 +65,8 @@ selectLetter.addEventListener("click", e => {
             if(counterIncorrect+1 === 8){
                 alert(`Sorry, you've made too many incorrect guesses, the word is ${input.value}`);
                 charInputContainer.classList.add("offline");
+                losses++
+                document.querySelector(".lossesNumber").innerText = losses;
                 for(let i=0; i<input.value.length; i++){
                     let letterIdentifier = document.querySelector(".div-"+i);
                     letterIdentifier.classList.remove("invisible");
@@ -86,6 +90,8 @@ function checkWin(){
         charInputContainer.classList.add("offline");
         document.querySelector(`.ufo-${counterIncorrect}`).classList.add("offline");
         document.querySelector(".showWin").classList.remove("offline");
+        wins++
+        document.querySelector(".winsNumber").innerText = wins;
     }
 }
 
