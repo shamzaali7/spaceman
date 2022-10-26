@@ -16,11 +16,15 @@ let checkerUsed = 0;
 let alreadyUsed = [];
 let wins = 0;
 let losses = 0;
-console.log(localStorage)
 if(localStorage.wins === undefined){
-    document.querySelector(".winsNumber").innerText= 0
+    document.querySelector(".winsNumber").innerText= 0;
 }else{
 document.querySelector(".winsNumber").innerText = localStorage.wins;
+}
+if(localStorage.losses === undefined){
+    document.querySelector(".lossesNumber").innerText= 0;
+}else{
+document.querySelector(".lossesNumber").innerText = localStorage.losses;
 }
 
 selectWord.addEventListener("click", e => {
@@ -72,7 +76,14 @@ selectLetter.addEventListener("click", e => {
                 alert(`Sorry, you've made too many incorrect guesses, the word is ${input.value}`);
                 charInputContainer.classList.add("offline");
                 losses++
-                document.querySelector(".lossesNumber").innerText = losses;
+                let totalLosses = losses;
+                if(localStorage.losses != null){
+                    totalLosses = losses + parseInt(localStorage.losses);
+                }
+                localStorage.setItem("losses", totalLosses)
+                document.querySelector(".lossesNumber").innerText = totalLosses;
+                console.log(localStorage);
+                console.log(localStorage.losses)
                 for(let i=0; i<input.value.length; i++){
                     let letterIdentifier = document.querySelector(".div-"+i);
                     letterIdentifier.classList.remove("invisible");
@@ -98,13 +109,11 @@ function checkWin(){
         document.querySelector(".showWin").classList.remove("offline");
         wins++;
         let totalWins = wins;
-        if(localStorage.length){
+        if(localStorage.wins != null){
         totalWins = wins + parseInt(localStorage.wins)
         }
         localStorage.setItem("wins", totalWins);
         document.querySelector(".winsNumber").innerText = totalWins;
-        console.log(localStorage.wins)
-        console.log(localStorage)
     }
 }
 
