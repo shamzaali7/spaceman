@@ -16,7 +16,12 @@ let checkerUsed = 0;
 let alreadyUsed = [];
 let wins = 0;
 let losses = 0;
-
+console.log(localStorage)
+if(localStorage.wins === undefined){
+    document.querySelector(".winsNumber").innerText= 0
+}else{
+document.querySelector(".winsNumber").innerText = localStorage.wins;
+}
 
 selectWord.addEventListener("click", e => {
     e.preventDefault();
@@ -91,8 +96,15 @@ function checkWin(){
         charInputContainer.classList.add("offline");
         document.querySelector(`.ufo-${counterIncorrect}`).classList.add("offline");
         document.querySelector(".showWin").classList.remove("offline");
-        wins++
-        document.querySelector(".winsNumber").innerText = wins;
+        wins++;
+        let totalWins = wins;
+        if(localStorage.length){
+        totalWins = wins + parseInt(localStorage.wins)
+        }
+        localStorage.setItem("wins", totalWins);
+        document.querySelector(".winsNumber").innerText = totalWins;
+        console.log(localStorage.wins)
+        console.log(localStorage)
     }
 }
 
