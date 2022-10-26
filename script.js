@@ -55,6 +55,10 @@ selectLetter.addEventListener("click", e => {
         alert("you have already used that character");
         alreadyUsed.splice(counterLetter);
         counterLetter--;
+    }else if(inputLetter.value.length != 1){
+        alert("Please enter a single letter");
+        alreadyUsed.splice(counterLetter);
+        counterLetter--;
     }else{
         for(let i=0; i<input.value.length; i++){
             if(inputLetter.value.toLowerCase() == input.value.charAt(i).toLowerCase()){
@@ -82,8 +86,6 @@ selectLetter.addEventListener("click", e => {
                 }
                 localStorage.setItem("losses", totalLosses)
                 document.querySelector(".lossesNumber").innerText = totalLosses;
-                console.log(localStorage);
-                console.log(localStorage.losses)
                 for(let i=0; i<input.value.length; i++){
                     let letterIdentifier = document.querySelector(".div-"+i);
                     letterIdentifier.classList.remove("invisible");
