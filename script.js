@@ -6,6 +6,8 @@ const selectWord = document.querySelector(".button-word");
 const selectLetter = document.querySelector(".button-letter");
 const displayUsedLetters = document.querySelector(".display-used-letters")
 const reset = document.querySelector(".resetB");
+const localWins = document.querySelector(".winsNumber");
+const localLosses = document.querySelector(".lossesNumber")
 let input = document.querySelector(".user-word");
 let inputLetter = document.querySelector(".user-letter");
 let inputChecker = "";
@@ -16,15 +18,16 @@ let checkerUsed = 0;
 let alreadyUsed = [];
 let wins = 0;
 let losses = 0;
+
 if(localStorage.wins === undefined){
-    document.querySelector(".winsNumber").innerText= 0;
+    localWins.innerText= 0;
 }else{
-document.querySelector(".winsNumber").innerText = localStorage.wins;
+    localWins.innerText = localStorage.wins;
 }
 if(localStorage.losses === undefined){
-    document.querySelector(".lossesNumber").innerText= 0;
+    localLosses.innerText= 0;
 }else{
-document.querySelector(".lossesNumber").innerText = localStorage.losses;
+    localLosses.innerText = localStorage.losses;
 }
 
 selectWord.addEventListener("click", e => {
