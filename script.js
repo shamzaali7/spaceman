@@ -126,15 +126,15 @@ reset.addEventListener("click", reload => {
     location.reload();
 })
 
-// input.addEventListener("Enter", e => {
-//     if(e.key === "Enter"){
-//         e.preventDefault();
-//         selectWord.click();
-//     }
-// })
-// inputLetter.addEventListener("Enter", e => {
-//     if(e.key === "Enter"){
-//         e.preventDefault();
-//         selectLetter.click();
-//     }
-// })
+input.addEventListener("keyup", e => {
+    if(e.keyCode == 13){
+        e.preventDefault();
+        selectWord.click();
+    }
+})
+inputLetter.addEventListener("keyup", e => {
+    if(e.keyCode === 13){
+        e.preventDefault();
+        selectLetter.click();
+    }
+})
