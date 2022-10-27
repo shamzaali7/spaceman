@@ -1,5 +1,6 @@
-![Spaceman](Spaceman.png)
-![badge](https://img.shields.io/github/last-commit/shamzaali7/spaceman)
+*![Spaceman](Spaceman.png)
+*![badge](https://img.shields.io/github/last-commit/shamzaali7/spaceman)
+
 Spaceman is the best alternative to hangman, and the games UI is very easy to use and understand!
 
 ## How to use
