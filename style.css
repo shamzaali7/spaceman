@@ -20,7 +20,7 @@ body{
     color: rgba(255,255,255,0.5);
     font-size: 100px;
     font-family: 'Bungee Shade', cursive;
-    margin: 20px 0px 10px 0;
+    margin: 20px 20px 10px 0;
 }
 .resetDiv{
     margin: 50px 50px 0 0;
@@ -81,7 +81,7 @@ body{
     flex: 1.5;
     align-items: center;
     justify-content: center;
-    margin: 0 0 0 20px;
+    margin: 0 0 0 50px;
 }
 .containerUFO .box-3{
     flex: 1;
@@ -127,4 +127,7 @@ body{
 .clear{
     color: rgba(255,255,255,0.8);
     font-family: 'Bungee Shade', cursive;
+}
+@media only screen and (max-width: 1140px){
+    
 }
