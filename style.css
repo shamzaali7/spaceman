@@ -1,6 +1,9 @@
 body{
     background-image: url("https://i.imgur.com/iKVoqHz.jpg");
 }
+img{
+    border-radius: 20px;
+}
 .overlap{
     position: relative;
     /* z-index: -1; */
