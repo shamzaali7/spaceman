@@ -131,7 +131,7 @@ body{
 }
 @media only screen and (min-width: 1440px){
     .containerTitle .title{
-        margin: 0 10px 0 0;
+        margin: 0 50px 0 0;
     }
     .containerUFO .box2{
         margin: 0 0 0 50px;
