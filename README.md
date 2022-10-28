@@ -20,7 +20,20 @@ Spaceman is the best alternative to hangman, and the games UI is very easy to us
 -On the right side of the screen is a scoreboard that collects information based on the second players wins and losses and stores it in the local memory of the users computer
 -At the bottom is a box field that provides the second user with information on their current correct guesses and progress on formulating the word provided by the first user
 
-## Code!
+## Wireframes
+-https://whimsical.com/PVu8DC1QD7JF44bgW2mydV
+
+## User Stories
+As a user, I want to start with a text field so that the first player can provide an input word.
+As a user, I want to make guesses to try to identify what letters are in the word present so that I can identify the word.
+As a user, I want to prevent the ufo from being built by making correct guesses so that I can win the game.
+As a user, I want continue to win so that the number of wins on the right accumulate.
+As a user, I want to hit the reset button if I accidentally type in the wrong letter so that I don't accumulate more losses.
+
+## Layout
+![Screenshot](Screenshot.png)
+
+## Code
 ![HTML-File](HTML.png)
 ![CSS-File](CSS.png)
 ![Javascript-File](Script.png)
