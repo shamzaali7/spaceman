@@ -4,6 +4,9 @@ body{
 img{
     border-radius: 20px;
 }
+button{
+    border-radius: 40px;
+}
 .overlap{
     position: relative;
     /* z-index: -1; */
@@ -11,11 +14,11 @@ img{
 .containerTitle{
     display: flex;
 }
-.containerTitle div{
+.containerTitle .resetDiv{
     flex: 1;
     text-align: right;
 }
-.align{
+.instructions{
     flex: 1;
     margin: 50px 0 0 50px;
 }
@@ -24,11 +27,19 @@ img{
     color: rgba(255,255,255,0.5);
     font-size: 100px;
     font-family: 'Bungee Shade', cursive;
-    margin: 20px 0px 10px 25px;
+    margin: 20px 0px 10px 0px;
+    text-align: center;
 }
 .resetDiv{
     margin: 50px 50px 0 0;
     flex: 1;
+}
+.resetB{
+    background-color: green;
+    opacity: 0.9;
+}
+.openB{
+    background-color: rgba(255,255,255,0.5);
 }
 .containerInput{
     margin: 50px 0 0 50px;
@@ -40,7 +51,7 @@ img{
 .button-word{
     width: 70px;
     height: 20px;
-    margin: 20px 0 0 0;
+    margin: 20px 0 0 5px;
     padding: 0 0 10px 0;
 }
 .containerInputLetter{
@@ -85,7 +96,7 @@ img{
     flex: 1.5;
     align-items: center;
     justify-content: center;
-    margin: 0 0 0 20px;
+    margin: 0 0 0 10px;
 }
 .containerUFO .box-3{
     flex: 1;
@@ -100,7 +111,7 @@ img{
     margin: 50px;
 }
 .containerLetters{
-    background-color: rgba(0,0,0,0.99);
+    background-color: rgba(0,0,0,0.5);
     border-style: groove;
     border-color: white;
     border-width: 2px;
@@ -126,17 +137,47 @@ img{
     color: red;
 }
 .invisible{
-    color: rgba(0,0,0,0.9);
+    color: rgba(0,0,0,0.0);
 }
 .clear{
     color: rgba(255,255,255,0.8);
     font-family: 'Bungee Shade', cursive;
 }
+
+.containerPopup{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+}
+.containerPopup.visib {
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    pointer-events: auto;
+}
+.popupContent{
+    background-color: white;
+    text-align: center;
+    width: 600px;
+    max-width: 100%;
+    border-radius: 15px;
+    padding: 10px;
+}
+.popupContent p{
+    opacity: 0.75;
+    font-size: 15px;
+}
+
+
+
 @media only screen and (min-width: 1440px){
-    .containerTitle .title{
-        margin: 0 50px 0 0;
-    }
     .containerUFO .box2{
-        margin: 0 0 0 75px;
+        margin: 0 0 0 100px;
     }
 }

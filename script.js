@@ -4,10 +4,10 @@ const inputContainer = document.querySelector(".containerInput");
 const charInputContainer = document.querySelector(".containerInputLetter");
 const selectWord = document.querySelector(".button-word");
 const selectLetter = document.querySelector(".button-letter");
-const displayUsedLetters = document.querySelector(".display-used-letters")
+const displayUsedLetters = document.querySelector(".display-used-letters");
 const reset = document.querySelector(".resetB");
 const localWins = document.querySelector(".winsNumber");
-const localLosses = document.querySelector(".lossesNumber")
+const localLosses = document.querySelector(".lossesNumber");
 let input = document.querySelector(".user-word");
 let inputLetter = document.querySelector(".user-letter");
 let inputChecker = "";
@@ -18,6 +18,15 @@ let checkerUsed = 0;
 let alreadyUsed = [];
 let wins = 0;
 let losses = 0;
+
+const correctAudio = new Audio();
+correctAudio.src = "Correct.mp3"
+const wrongAudio = new Audio();
+wrongAudio.src = "Wrong.mp3";
+const winAudio = new Audio();
+winAudio.src = "Win.mp3";
+const loseAudio = new Audio();
+loseAudio.src = "Lose.mp3";
 
 if(localStorage.wins === undefined){
     localWins.innerText= 0;
@@ -65,6 +74,7 @@ selectLetter.addEventListener("click", e => {
     }else{
         for(let i=0; i<input.value.length; i++){
             if(inputLetter.value.toLowerCase() == input.value.charAt(i).toLowerCase()){
+                correctAudio.play();
                 let letterHolder = document.querySelector(".div-"+i);
                 letterHolder.classList.remove("invisible");
                 letterHolder.classList.add("clear");
@@ -74,12 +84,14 @@ selectLetter.addEventListener("click", e => {
             }
         }
         if(inputChecker == ""){
+            wrongAudio.play();
             alert("Incorrect letter")
             let off = document.querySelector(`.ufo-${counterIncorrect}`);
             off.classList.add("offline");
             let on = document.querySelector(`.ufo-${(counterIncorrect+1)}`);
             on.classList.remove("offline");
             if(counterIncorrect+1 === 8){
+                loseAudio.play();
                 alert(`Sorry, you've made too many incorrect guesses, the word is ${input.value}`);
                 charInputContainer.classList.add("offline");
                 losses++
@@ -108,6 +120,7 @@ selectLetter.addEventListener("click", e => {
 
 function checkWin(){
     if(counterCorrect == input.value.length){
+        winAudio.play();
         alert("You Win!");
         charInputContainer.classList.add("offline");
         document.querySelector(`.ufo-${counterIncorrect}`).classList.add("offline");
@@ -137,4 +150,14 @@ inputLetter.addEventListener("keyup", e => {
         e.preventDefault();
         selectLetter.click();
     }
+})
+
+const openB = document.querySelector(".openB");
+const closeB = document.querySelector(".closeB");
+const containerPopup = document.querySelector(".containerPopup");
+openB.addEventListener("click", () => {
+    containerPopup.classList.add("visib");
+})
+closeB.addEventListener("click",() => {
+    containerPopup.classList.remove("visib");
 })
