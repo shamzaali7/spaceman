@@ -6,6 +6,8 @@ img{
 }
 button{
     border-radius: 40px;
+    background-color: rgb(0,0,0);
+    color: white;
 }
 .containerTitle{
     display: flex;
@@ -18,13 +20,13 @@ button{
     flex: 1;
     margin: 50px 0 0 50px;
 }
-.resetB{
+/* .resetB{
     background-color: green;
     opacity: 0.9;
-}
-.openB{
+} */
+/* .openB{
     background-color: rgba(255,255,255,0.5);
-}
+} */
 .title{
     flex: 2;
     color: rgba(255,255,255,0.5);
