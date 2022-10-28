@@ -1,4 +1,3 @@
-//Psuedo code: grab 
 const lettersContainer = document.querySelector(".containerLetters");
 const inputContainer = document.querySelector(".containerInput");
 const charInputContainer = document.querySelector(".containerInputLetter");
@@ -121,7 +120,6 @@ selectLetter.addEventListener("click", e => {
     counterLetter++;
 })
 
-
 function checkWin(){
     if(counterCorrect == input.value.length){
         winAudio.play();
@@ -155,7 +153,6 @@ inputLetter.addEventListener("keyup", e => {
         selectLetter.click();
     }
 })
-
 
 openB.addEventListener("click", () => {
     containerPopup.classList.add("visib");
