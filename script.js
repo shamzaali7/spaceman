@@ -8,6 +8,9 @@ const displayUsedLetters = document.querySelector(".display-used-letters");
 const reset = document.querySelector(".resetB");
 const localWins = document.querySelector(".winsNumber");
 const localLosses = document.querySelector(".lossesNumber");
+const containerPopup = document.querySelector(".containerPopup");
+const openB = document.querySelector(".openB");
+const closeB = document.querySelector(".closeB");
 let input = document.querySelector(".user-word");
 let inputLetter = document.querySelector(".user-letter");
 let inputChecker = "";
@@ -152,9 +155,7 @@ inputLetter.addEventListener("keyup", e => {
     }
 })
 
-const openB = document.querySelector(".openB");
-const closeB = document.querySelector(".closeB");
-const containerPopup = document.querySelector(".containerPopup");
+
 openB.addEventListener("click", () => {
     containerPopup.classList.add("visib");
 })
