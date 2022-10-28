@@ -20,7 +20,8 @@ Spaceman is the best alternative to hangman, and the games UI is very easy to us
 -On the right side of the screen is a scoreboard that collects information based on the second players wins and losses and stores it in the local memory of the users computer
 -At the bottom is a box field that provides the second user with information on their current correct guesses and progress on formulating the word provided by the first user
 
-## Code
+## Code!
+[Screenshot](https://user-images.githubusercontent.com/115019127/198510110-255e9e7b-58c5-4ec7-94ec-8b6dc97b5dd0.png)
 ![HTML-File](HTML.png)
 ![CSS-File](CSS.png)
 ![Javascript-File](Script.png)
