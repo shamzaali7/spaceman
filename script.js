@@ -107,6 +107,7 @@ selectLetter.addEventListener("click", e => {
                 for(let i=0; i<input.value.length; i++){
                     let letterIdentifier = document.querySelector(".div-"+i);
                     letterIdentifier.classList.remove("invisible");
+                    letterIdentifier.classList.add("clear")
                 }
             }
             counterIncorrect++;
